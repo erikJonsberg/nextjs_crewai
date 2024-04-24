@@ -5,7 +5,7 @@ description = "Automate YouTube tasks with CrewAI"
 authors = ["bhancock_ai <brandon@brandonhancock.io>", "João Moura <joaomdmoura@mgail.com>"]
 
 [tool.poetry.dependencies]
-python = ">=3.10.0,<3.12"
+python = ">=3.10.0,<=3.12.3"
 crewai = {extras = ["tools"], version = "^0.22.4"}
 pydantic = "^2.6.3"
 load-dotenv = "^0.1.0"
