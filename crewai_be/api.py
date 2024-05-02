@@ -4,12 +4,13 @@ from threading import Thread
 
 from uuid import uuid4
 from flask import Flask, abort, jsonify, request
+from flask_cors import CORS
 
 from crew import CompanyResearchCrew
 from job_manager import jobs, jobs_lock, append_event, Event
 
 app = Flask(__name__)
-
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 def kickoff_crew(job_id: str, companies: list[str], positions: list[str]):
     print(f'Running crew.ai with job_id={job_id}, companies={
           companies}, positions={positions}')
@@ -24,11 +25,11 @@ def kickoff_crew(job_id: str, companies: list[str], positions: list[str]):
         print(f'An error occurred: {str(e)}')
         append_event(job_id, f"An error occurred: {str(e)}")
         with jobs_lock:
-            jobs[job_id].status = "error"
+            jobs[job_id].status = "ERROR"
             jobs[job_id].result = str(e)
 
     with jobs_lock:
-            jobs[job_id].status = "success"
+            jobs[job_id].status = "COMPLETE"
             jobs[job_id].result = results
             jobs[job_id].events.append(Event(data="Crew finished", timestamp=datetime.now()))
 

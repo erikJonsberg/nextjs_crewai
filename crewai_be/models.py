@@ -12,7 +12,7 @@ class PositionInfo(BaseModel):
     position: str
     name: str
     blog_articles_urls: List[str]
-    you_interview_urls: List[NamedUrls]
+    youtube_interview_urls: List[NamedUrls]
 
 
 class PositionInfoList(BaseModel):
