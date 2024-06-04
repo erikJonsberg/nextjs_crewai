@@ -2,7 +2,7 @@
 name = "nextjs-crewai-tutorial"
 version = "0.1.0"
 description = "Automate YouTube tasks with CrewAI"
-authors = ["bhancock_ai <brandon@brandonhancock.io>", "João Moura <joaomdmoura@mgail.com>"]
+authors = ["Erik Jonsberg <ebjonsberg@gmail.com>", "bhancock_ai <brandon@brandonhancock.io>", "João Moura <joaomdmoura@mgail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.10.0,<=3.12.3"
