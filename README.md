@@ -38,6 +38,12 @@ Run the Poetry shell
 poetry shell
 ```
 
+Run the server
+
+```bash
+python api.py
+```
+
 ### Install the front-end
 
 From the `root` directory
@@ -60,7 +66,7 @@ npm run dev
 
 To learn more about Next.js and CrewAI, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [CrewAI Documentation](https://docs.crewai.com/) - learn about CrewAI features and API.
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [CrewAI Documentation](https://docs.crewai.com/) - learn about CrewAI features and API.
 
 You can check out [the Next.js](https://github.com/vercel/next.js/), and [CrewAI](https://github.com/joaomdmoura/crewai) GitHub repositories.
